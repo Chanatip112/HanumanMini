@@ -1,0 +1,18 @@
+{
+    "name": "HanumanMini",
+    "version": "1.0.1",
+    "keywords": "Robot",
+    "description": "Library for HanumanMini",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Chanatip112/HanumanMini.git"
+    },
+    "authors": [
+        {
+            "name": "ArtronAcademy",
+            "email": "artronacademy@gmail.com"
+        }
+    ],
+    "frameworks": "arduino",
+    "platforms": "ATmega328P"
+}
