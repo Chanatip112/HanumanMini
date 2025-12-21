@@ -2,9 +2,9 @@
 /*
  *
  * 	File		    : 	Hanuman_MINI_SW.h
- *	Release	  	: 	v0.1
+ *	Release	  	: 	v0.2
  *
- *	Created on	:	  27 Sep 2025
+ *	Created on	:	  21 Dec 2025
  *		  Author	: 	Chanatip112
  *
  */

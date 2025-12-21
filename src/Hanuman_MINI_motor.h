@@ -2,9 +2,9 @@
 /*
  *
  *	File	    	: 	Hanuman_MINI_motor.h
- *	Release 		:	  v0.1
+ *	Release 		:	  v0.2
  *
- *	Created on	:	  27 Sep 2025
+ *	Created on	:	  21 Dec 2025
  *		  Author	:	  Chanatip112
  *
  */
@@ -27,6 +27,7 @@ void motor(int ch, int pow) {
   if ((ch < 1) || (ch > 2)) {
     return;  // skip invaild ch
   }
+
   if (ch == 1) {
 
     pinMode(Pin_PWM_A, OUTPUT);
@@ -36,6 +37,12 @@ void motor(int ch, int pow) {
     analogWrite(Pin_PWM_A, pwm);
     digitalWrite(Pin_IN1_A, dir);
     digitalWrite(Pin_IN2_A, !dir);
+
+    if (pwm == 0) {
+      analogWrite(Pin_PWM_A, 0);
+      digitalWrite(Pin_IN1_A, 1);
+      digitalWrite(Pin_IN2_A, 1);
+    }
   } else {
     pinMode(Pin_PWM_B, OUTPUT);
     pinMode(Pin_IN1_B, OUTPUT);
@@ -44,37 +51,43 @@ void motor(int ch, int pow) {
     analogWrite(Pin_PWM_B, pwm);
     digitalWrite(Pin_IN1_B, dir);
     digitalWrite(Pin_IN2_B, !dir);
+
+    if (pwm == 0) {
+      analogWrite(Pin_PWM_B, 0);
+      digitalWrite(Pin_IN1_B, 1);
+      digitalWrite(Pin_IN2_B, 1);
+    }
   }
 }
 
 void fd(int spd) {
-  motor(1, abs(spd));
-  motor(2, abs(spd));
+  motor(1, spd);
+  motor(2, spd);
 }
 
 void fd2(int spd1, int spd2) {
-  motor(1, abs(spd1));
-  motor(2, abs(spd2));
+  motor(1, spd1);
+  motor(2, spd2);
 }
 
 void bk(int spd) {
-  motor(1, -abs(spd));
-  motor(2, -abs(spd));
+  motor(1, -spd);
+  motor(2, -spd);
 }
 
 void bk2(int spd1, int spd2) {
-  motor(1, -abs(spd1));
-  motor(2, -abs(spd2));
+  motor(1, -spd1);
+  motor(2, -spd2);
 }
 
 void sr(int spd) {
-  motor(1, abs(spd));
-  motor(2, -abs(spd));
+  motor(1, spd);
+  motor(2, -spd);
 }
 
 void sl(int spd) {
-  motor(1, -abs(spd));
-  motor(2, abs(spd));
+  motor(1, -spd);
+  motor(2, spd);
 }
 
 void ao() {
