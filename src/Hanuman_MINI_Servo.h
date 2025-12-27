@@ -2,7 +2,7 @@
 /*
  *
  *	File	    	:	  Hanuman_MINI_Servo.h
- *	Release		  : 	v0.2
+ *	Release		  : 	v0.3
  *
  *	Created on	:	  21 Dec 2025
  *		  Author	:	  Chanatip112
@@ -17,6 +17,9 @@
 
 #include "hii.h"
 
+#include<Servo.h>
+Servo myservo;
+
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 void servo(int ch, int deg) {
@@ -25,7 +28,6 @@ void servo(int ch, int deg) {
   }
   
   myservo.attach(ch);
-  // myservo.attach(11);
   deg = constrain(deg, 0, 180);
   myservo.write(deg);
 }
