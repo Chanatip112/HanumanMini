@@ -2,9 +2,9 @@
 /*
  *
  *	File	    	: 	Hanuman_MINI_motor.h
- *	Release 		:	  v0.2
+ *	Release 		:	  v0.3
  *
- *	Created on	:	  21 Dec 2025
+ *	Created on	:	  2 Feb 2026
  *		  Author	:	  Chanatip112
  *
  */
@@ -87,6 +87,16 @@ void sr(int spd) {
 
 void sl(int spd) {
   motor(1, -spd);
+  motor(2, spd);
+}
+
+void tr(int spd){
+  motor(1, spd);
+  motor(2, 0);
+}
+
+void tl(int spd){
+  motor(1, 0);
   motor(2, spd);
 }
 

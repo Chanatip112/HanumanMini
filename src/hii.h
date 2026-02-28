@@ -2,9 +2,9 @@
 /*
  *
  *	File	    : 	hii.h
- *	Release		:	v0.2
+ *	Release		:	v0.3
  *
- *	Created on	:	21 Dec 2025
+ *	Created on	:	2 Feb 2026
  *	    Author	:   Chanatip112
  *
  */
@@ -21,13 +21,15 @@
 
 #define _BaudRate 115200
 
-#define Pin_PWM_A 5
-#define Pin_IN1_A 3
+// Motor L
+#define Pin_PWM_A 6
+#define Pin_IN1_A 7
 #define Pin_IN2_A 4
 
-#define Pin_PWM_B 6
-#define Pin_IN1_B 7
-#define Pin_IN2_B 2
+// Motor R
+#define Pin_PWM_B 5
+#define Pin_IN1_B 2
+#define Pin_IN2_B 3
 
 #define _SW 8 
 
